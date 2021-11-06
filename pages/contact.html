@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Basement</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../imgs/icon2.jfif" />
+	<link rel="stylesheet" href="../lib/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../fontawesome-free-5.13.0-web/css/all.min.css">	
+	
+
+	<script type="text/javascript" src="../lib/jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="../lib/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<div id="header-left">
+			<a href="index.html"><img src="../imgs/header-logo_v3.png" alt="No image here!"></a>
+			<input type="text" placeholder="Search">
+			<span>Go!</span>
+			<i class="fas fa-search"></i>
+			<span>Advanced Search</span>
+		</div>
+		<div id="header-right">
+			<ul>
+				<li>
+					<i class="fas fa-sliders-h"></i>
+					<a href="">Dark mode</a>
+				</li>
+				<li>
+					<i class="fas fa-info"></i>
+					<a href="">Info</a>
+				</li>
+				<li>
+					<i class="fas fa-user-plus"></i>
+					<a href="">Sign up</a>
+				</li>
+				<li>
+					<i class="fas fa-sign-in-alt"></i>
+					<a href="signin.html">Log in</a>
+				</li>
+				<li>
+					<i class="fas fa-sign-out-alt"></i>
+					<a href="">Log out</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Body -->
+	<main>
+		<section id="navbar-left">
+			<div>
+				<h3>SE - Project</h3>
+				<ul>
+					<li>
+						<div><i class="fas fa-home"></i></div>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<div><i class="fas fa-book"></i></div>
+						<a href="">Recently Added</a>
+					</li>
+					<li>
+						<div><i class="fas fa-sort-amount-down-alt"></i></div>
+						<a href="">Sorted Books</a>
+					</li>
+					<li>
+						<div><i class="fab fa-gripfire"></i></div>
+						<a href="">Hot Books</a>
+					</li>
+					<li>
+						<div><i class="fas fa-star"></i></div>
+						<a href="">Best rated Books</a>
+					</li>
+					<li>
+						<div><i class="fas fa-list-alt"></i></div>
+						<a href="">Categories</a>
+					</li>
+					<li>
+						<div><i class="fas fa-bookmark"></i></div>
+						<a href="">Series</a>
+					</li>
+					<li>
+						<div><i class="fas fa-clipboard-list"></i></div>
+						<a href="">My list</a>
+					</li>
+					<hr>
+					<li>
+						<div><i class="fas fa-phone-volume"></i></div>
+						<a href="">Contact</a>
+					</li>
+					<li>
+						<div><i class="fas fa-question-circle"></i></div>
+						<a href="about.html">About us</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- Contact -->
+		<section id="contact">
+			<h2>Contact</h2>
+			<form action="http://localhost/BookBasement/test.php" method="POST">
+				<label>
+					<div>
+						<span>Name:</span>
+					</div>
+					<input type="text" name="username" value="" required>
+				</label>
+				<br>
+				<label>
+					<div>
+						<span>Age:</span>
+					</div>
+					<input type="number" name="age" value="" max="80" min="12" required>
+				</label>
+				<br>
+				<label>
+					<div>
+						<span>Phone number:</span>
+					</div>
+					<input type="text" name="phone" value="" id="mobile" required>
+				</label>
+				<br>
+				<label>
+					<div>
+						<span>Email:</span>
+					</div>
+					<input type="email" name="email" value="" required>
+				</label>
+				<br>
+				<label>
+					<div>
+						<span>Content:</span>
+					</div>
+					<br>
+					<textarea name="content" id="" cols="30" rows="5" required></textarea>
+				</label>
+				<br>
+				<button type="submit" class="check">Send</button>
+			</form>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div>Copyright <i class="far fa-copyright"></i>~Group8-Introduction_to_Software_Engineering / BookBasement</div>
+	</footer>
+
+	<script type="text/javascript" src="../js/functions.js"></script>
+</body>
+</html>
