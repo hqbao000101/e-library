@@ -73,40 +73,13 @@ header #header-right ul li i {
 
 
 /*header-left*/
+/*img*/
 header #header-left img {
 	height: 50px;
 	width: 150px;
 }
 
-header #header-left input {
-	padding: 7px 15px;
-	margin-left: 20px;
-	margin-right: -4px;
-	width: 15%; 
-	border: 1px solid #bdc3c7;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	cursor: text;  
-}
-
-header #header-left span:nth-of-type(1) {
-	color: #2d3436;
-	border: 1px solid #bdc3c7; 
-	padding: 9px;
-	background-color: white;
-	border-left: none;
-	padding-bottom: 10px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	margin-right: 20px; 
-	cursor: pointer; 
-}
-
-header #header-left span:nth-of-type(1):hover {
-	background-color: #78e08f;
-	color: white;
-}
-
+/*Advanced search*/
 header #header-left span:nth-of-type(2) {
 	color: #9fa8bc;
 	cursor: pointer; 
@@ -120,6 +93,64 @@ header #header-left span:nth-of-type(2):hover {
 	color: #2d3436;
 }
 
+/*input-search*/
+header #header-left .wrapper .search-input input {
+	padding: 7px 15px;
+	margin-left: 20px;
+	margin-right: -4px;
+	border: 1px solid #bdc3c7;
+	cursor: text;  
+}
+
+header #header-left .wrapper .search-input span:nth-of-type(1) {
+	color: #2d3436;
+	border: 1px solid #bdc3c7; 
+	padding: 9px;
+	background-color: white;
+	border-left: none;
+	padding-bottom: 10px;
+	margin-right: 20px; 
+	cursor: pointer; 
+}
+
+header #header-left .wrapper .search-input span:nth-of-type(1):hover {
+	background-color: #78e08f;
+	color: white;
+}
+
+header #header-left .wrapper {
+	display: inline-block;
+	position: relative; 
+}
+
+header #header-left .wrapper .search-input .autocom-box {
+	position: absolute; 
+	top: 100%;
+	left: 20px;
+	background-color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 205px;  
+	border: 1px solid #bdc3c7; 
+	z-index: 100;
+	display: none;
+}
+
+header #header-left .wrapper .search-input .autocom-box li {
+	list-style: none;
+	padding: 10px 15px;
+}
+
+header #header-left .wrapper .search-input .autocom-box.active {
+	display: block;
+}
+
+header #header-left .wrapper .search-input .autocom-box li:hover {
+	background-color: #bdc3c0;
+	border-radius: 10px;
+}
+
+
 /*Body*/
 main {
 	background-color: #f2f2f2;
@@ -128,6 +159,10 @@ main {
 }
 
 /*Navbar*/
+main {
+	min-height: 88vh;
+}
+
 main #navbar-left {
 	min-width: 350px; 
 }
@@ -175,6 +210,73 @@ main #navbar-left ul hr {
 main #navbar-left ul li:hover i, main #navbar-left ul li:hover a {
 	color:  #77b49d;
 }
+
+/*Navbar - category*/
+
+main #navbar-left div ul li:nth-child(8) .category{
+	display: none;
+}
+
+main #navbar-left div ul li:nth-child(8) .category a{
+	text-decoration: none;
+	color: white;
+}
+
+
+main #navbar-left div ul li:nth-child(8):hover .category{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px; 
+
+	background-color: #222;
+	width: 80%; 
+	padding: 20px;
+	color: white !important;  
+	border-radius: 10px;
+}
+
+main #navbar-left div ul li:nth-child(8) .category div:hover {
+	color: #2ecc71;
+}
+
+/*Navbar - sort book*/
+
+main #navbar-left div ul li:nth-child(2) .category{
+	display: none;
+}
+
+main #navbar-left div ul li:nth-child(2) .category a{
+	text-decoration: none;
+	color: white;
+}
+
+
+main #navbar-left div ul li:nth-child(2):hover .category{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px; 
+
+	background-color: #222;
+	width: 80%; 
+	padding: 20px;
+	color: white !important;  
+	border-radius: 10px;
+}
+
+main #navbar-left div ul li:nth-child(2) .category div:hover i,
+main #navbar-left div ul li:nth-child(2) .category div:hover {
+	color: #2ecc71;
+}
+
+
+main #navbar-left div ul li:nth-child(2) .category div i {
+	color: white;
+	font-size: 13px;
+	margin: 2px; 
+}
+
+
+
 
 
 /*Body-booklist*/
@@ -248,7 +350,7 @@ main #book-storage #grid-wrapper {
 	margin-bottom: 100px;   
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
+	/*grid-template-rows: repeat(5, 1fr);*/
 	grid-gap: 40px;
 }
 
@@ -474,8 +576,12 @@ main #details .detail-wrapper .detail-comment {
 }
 
 main #details .detail-wrapper .detail-comment:hover {
-	background-color: white;
+	background-color: #54a0ff;
 	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+main #details .detail-wrapper .detail-comment:hover i {
+	color: #2e86de;
 }
 
 main #details .detail-wrapper .detail-comment p {
@@ -485,7 +591,144 @@ main #details .detail-wrapper .detail-comment p {
 main #details .detail-wrapper .detail-comment i {
 	font-size: 30px;
 	padding: 20px; 
-	color: #4834d4; 
+	color: #7bed9f; 
+}
+
+/*Account*/
+main #account {
+	width: 100%; 
+}
+
+main #account #account-banner {
+	background: url("../imgs/banner_account.jpg"); 
+	padding: 10px 0 30px 50px;
+	background-size: cover;
+}
+
+main #account #account-banner h2 {
+	font-size: 50px;
+	color: #2ed573;
+	font-family: "kaushan";
+}
+
+main #account #account-banner h2 span {
+	font-size: 30px;
+	color: white;
+	font-family: "kaushan";
+	font-style: italic;
+}
+
+main #account #account-banner img {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8); 
+}
+
+main #account h3{
+	font-size: 35px;
+	font-weight: bold;
+	margin-top: 50px;  
+}
+
+main #account hr{
+	height: 2px; 
+	background-image: linear-gradient(to right,black,white);
+}
+
+main #account div:nth-of-type(2) h5{
+	font-size: 20px;  
+	font-style: italic;
+	margin-bottom: 15px; 
+}
+
+main #account #grid-wrapper{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	overflow: hidden; 
+	padding-bottom: 50px;
+}
+
+main #account #grid-wrapper img{
+	width: 200px;
+	height: 250px;
+	padding: 20px;
+}
+
+/*Upload*/
+main #upload_book {
+	width: 100%; 
+}
+
+main #upload_book h2{
+	margin-top: 50px;
+	margin-bottom: 20px; 
+	font-size: 50px;
+	color: #77b49d;
+	font-family: "kaushan";
+}
+
+main #upload_book form {
+	padding: 0px 0px 50px 100px;
+}
+
+main #upload_book input {
+	min-width: 500px;
+	padding: 10px;
+	font-size: 20px;
+	color: #2d3436;
+	font-family: "roboto-lightI";
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+main #upload_book #genre_section input,
+main #upload_book #status_section input {
+	min-width: 20px;
+	padding: 10px;
+	font-size: 20px;
+	color: #2d3436;
+	font-family: "roboto-lightI";
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+main #upload_book form span {
+	font-size: 20px;
+	color: #2d3436;
+	font-family: "montserrat-bold";
+}
+
+main #upload_book form label {
+	margin-top: 20px;
+}
+
+main #upload_book textarea {
+	width: 100%;
+	resize: none;
+	overflow: auto;
+	font-size: 20px;
+	padding:  10px;
+	border-radius: 10px;
+	font-family: "roboto-lightI";
+}
+
+main #upload_book input[type="file"] {
+	background-color: white;
+}
+
+main #upload_book button {
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: #54a0ff;
+	font-size: 15px;
+	color: white;
+	border: 1px solid black;
+	margin-top: 20px;
+}
+
+main #upload_book button:hover {
+	background-color: blue;
 }
 
 /*Responsive*/
@@ -506,4 +749,10 @@ main #details .detail-wrapper .detail-comment i {
 	main #contact form button {
 		margin-left: 580px;
 	}
+
+	/*upload*/
+	main #upload_book form {
+		padding: 0px 0px 50px 0px;
+	}
+
 }
